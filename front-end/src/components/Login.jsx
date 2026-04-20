@@ -46,15 +46,12 @@ function Login() {
   return (
     <div className="login-wrapper">
 
-      {/* 🎥 Background Video */}
-      <video autoPlay muted loop className="bg-video">
-        <source
-          src="https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <div className="theme-background">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
 
-      {/* <div className="overlay"></div> */}
 
       <form className="login-card" onSubmit={handleSubmit}>
         <h2 className="login-title">Welcome Back</h2>
