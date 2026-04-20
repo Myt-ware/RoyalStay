@@ -1,0 +1,111 @@
+.menu-page{
+padding:30px;
+margin-top: 80px;
+}
+
+.menu-page h2{
+margin-bottom:20px;
+font-weight:600;
+}
+
+.menu-form{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.menu-form input,
+.menu-form select{
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.menu-form button{
+background:#4f46e5;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:20px;
+}
+
+.menu-card{
+background:white;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+padding:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.menu-card:hover{
+transform:translateY(-5px);
+}
+
+.menu-card img{
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.price{
+font-weight:bold;
+color:#4f46e5;
+}
+
+.veg{
+background:green;
+color:white;
+padding:4px 10px;
+border-radius:5px;
+font-size:12px;
+}
+
+.nonveg{
+background:red;
+color:white;
+padding:4px 10px;
+border-radius:5px;
+font-size:12px;
+}
+
+.menu-actions{
+margin-top:10px;
+display:flex;
+justify-content:space-between;
+}
+
+.menu-actions button{
+border:none;
+padding:6px 12px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.menu-actions button:first-child{
+background:#22c55e;
+color:white;
+}
+
+.menu-actions button:last-child{
+background:#ef4444;
+color:white;
+}
+
+@media(max-width:768px){
+
+.menu-form{
+flex-direction:column;
+}
+
+}

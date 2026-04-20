@@ -1,0 +1,150 @@
+/* Full screen container */
+.landing-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Background Video (Modern Centering) */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: -1;
+}
+
+/* Content Center */
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+
+  animation: fadeSlide 1.2s ease forwards;
+  opacity: 0;
+}
+
+/* Title */
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+/* Buttons Base */
+.reg-btn {
+  padding: 14px 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+/* User Button */
+.user-btn {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+}
+
+.user-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 87, 34, 0.4);
+}
+
+/* Shop Button */
+.shop-btn {
+  background: linear-gradient(45deg, #00c853, #00bfa5);
+  color: white;
+}
+
+.shop-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 200, 83, 0.4);
+}
+
+/* Smooth Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+        align-items: center;
+  }
+
+  .reg-btn {
+    
+    width: 90%;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.9rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,246 @@
+/* ================================
+   SHOP DASHBOARD ORIGINAL CSS
+=================================== */
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-title {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-box {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.card-box h3 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.card-box p {
+  font-size: 18px;
+  margin: 10px 0 0 0;
+}
+
+/* PREMIUM BOOKINGS TABLE - GLASS ROW LAYOUT */
+.roomC {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px auto; 
+  max-width: 1400px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  color: #f8fafc;
+}
+
+.roomC h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #9c0505, #959806);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.roomC hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(59,130,246,0.5), transparent);
+  margin-bottom: 30px;
+}
+
+.Table {
+  width: 100%;
+  border-collapse: separate; /* Required for floating row spaces */
+  border-spacing: 0 12px; /* Spacing between rows */
+  margin-top: 10px;
+}
+
+.Table th {
+  background-color: transparent;
+  color: #94a3b8;
+  padding: 10px 20px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+}
+
+.Table td {
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.6);
+  vertical-align: middle;
+  color: #e2e8f0;
+  font-size: 14.5px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+/* First column rounded corners & accent */
+.Table td:first-child {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-left: 1px solid rgba(255,255,255,0.05);
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* Last column rounded corners */
+.Table td:last-child {
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Glassmorphic row hover highlighting */
+.Table tr:hover td {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+/* Style the buttons securely matching Bookings.jsx inline styles mapping */
+.Table button {
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  letter-spacing: 0.5px !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.Table button[style*="green"] {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3) !important;
+}
+
+.Table button[style*="red"] {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3) !important;
+}
+
+.Table button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================================
+   SHOP NAVBAR ORIGINAL CSS
+=================================== */
+
+.shop-navbar {
+  background-color: #212529 !important; /* Standard dark theme */
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.shop-navbar .logo {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.nav-links {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links .nav-link {
+  color: #adb5bd !important;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links .nav-link:hover {
+  color: #fff !important;
+}
+
+.nav-links .active-link {
+  color: #fff !important;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.welcome {
+  color: #f8f9fa;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white !important;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.mobile-menu .offcanvas-header {
+  background-color: #212529;
+  color: white;
+}
+
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-links li {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-links a {
+  text-decoration: none;
+  color: #212529;
+  font-weight: 600;
+  font-size: 18px;
+  display: block;
+}
+
+.mobile-footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

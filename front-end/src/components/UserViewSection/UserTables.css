@@ -1,0 +1,341 @@
+.main {
+  position: relative;
+  min-height: 100vh;
+  background: #0f172a;
+}
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+.dark-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.85);
+  z-index: 1;
+}
+
+.tables-page {
+  position: relative;
+  z-index: 2;
+  padding: 100px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 4px 15px rgba(165, 180, 252, 0.2);
+  margin-bottom: 10px;
+}
+
+.title-header p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.modern-table-card.premium-mode {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modern-table-card.premium-mode:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.modern-table-card.premium-mode:hover .card-image-wrapper img {
+  transform: scale(1.08);
+}
+
+.table-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fbbf24;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.capacity-overlay {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  color: #0f172a;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.card-body {
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header-row h3 {
+  font-size: 26px;
+  color: #f8fafc;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.location-badge {
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.table-description {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.table-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 13px;
+}
+.feature-item i {
+  color: #10b981;
+  font-size: 14px;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 0 20px 0;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price-hint {
+  display: flex;
+  flex-direction: column;
+}
+.price-hint span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+.free-text {
+  font-size: 16px;
+  color: #34d399;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.book-table-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.book-table-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(245, 158, 11, 0.5);
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.no-data {
+  text-align: center;
+  color: #94a3b8;
+  grid-column: 1 / -1;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .tables-page {
+    padding: 80px 10px 40px;
+  }
+  .title-header h2 {
+    font-size: 26px;
+  }
+  .title-header p {
+    font-size: 12px;
+  }
+  .tables-grid {
+    grid-template-columns: repeat(2, 1fr); /* Enforce 2 cards per row */
+    gap: 10px;
+  }
+  .modern-table-card.premium-mode {
+    border-radius: 12px;
+  }
+  .card-image-wrapper {
+    height: 120px;
+  }
+  .table-badge {
+    padding: 4px 8px;
+    font-size: 9px;
+    top: 6px;
+    left: 6px;
+    border-radius: 8px;
+  }
+  .capacity-overlay {
+    bottom: 6px; right: 6px; font-size: 9px; padding: 4px 8px; border-radius: 8px;
+  }
+  .card-body {
+    padding: 10px;
+  }
+  .card-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .card-header-row h3 {
+    font-size: 14px;
+  }
+  .location-badge {
+    font-size: 9px;
+  }
+  .table-description {
+    font-size: 10px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2.5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .table-features {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .feature-item {
+    font-size: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .feature-item i {
+    font-size: 10px;
+  }
+  .divider {
+    margin: 0 0 10px 0;
+  }
+  .table-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .price-hint span {
+    font-size: 9px;
+  }
+  .free-text {
+    font-size: 11px;
+  }
+  .book-table-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
